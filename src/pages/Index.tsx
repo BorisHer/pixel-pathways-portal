@@ -1,12 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import PixelNavbar from '../components/PixelNavbar';
+import PixelHero from '../components/PixelHero';
+import PixelAbout from '../components/PixelAbout';
+import PixelHowItWorks from '../components/PixelHowItWorks';
+import PixelForWho from '../components/PixelForWho';
+import PixelCTA from '../components/PixelCTA';
+import PixelFooter from '../components/PixelFooter';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-pixel-black">
+      <PixelNavbar />
+      <PixelHero />
+      <PixelAbout />
+      <PixelHowItWorks />
+      <PixelForWho />
+      <PixelCTA />
+      <PixelFooter />
     </div>
   );
 };
