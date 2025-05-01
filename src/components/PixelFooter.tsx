@@ -8,9 +8,9 @@ const PixelFooter: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
-            <h3 className="font-pixel text-pixel-orange text-lg mb-4">PIXEL PATHS</h3>
+            <h3 className="font-pixel text-pixel-orange text-lg mb-4">NEXT LEVEL</h3>
             <p className="font-pixel-secondary text-white mb-4">
-              Connecting students with short-term career experiences through our micro-apprenticeship platform.
+              Connecting students with short-term job opportunities through our micro-apprenticeship platform.
             </p>
           </div>
           
@@ -18,23 +18,23 @@ const PixelFooter: React.FC = () => {
             <h3 className="font-pixel text-pixel-orange text-lg mb-4">QUICK LINKS</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/students" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
-                  For Students
+                <Link to="/jobs" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
+                  Browse Jobs
                 </Link>
               </li>
               <li>
-                <Link to="/businesses" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
-                  For Businesses
+                <Link to="/applications" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
+                  My Applications
+                </Link>
+              </li>
+              <li>
+                <Link to="/post-job" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
+                  Post a Job
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
-                  Contact
                 </Link>
               </li>
             </ul>
@@ -54,14 +54,14 @@ const PixelFooter: React.FC = () => {
               </a>
             </div>
             <Link to="/contact" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors">
-              info@pixelpaths.com
+              info@nextlevel.com
             </Link>
           </div>
         </div>
         
         <div className="border-t border-pixel-dark-gray pt-6">
           <p className="font-pixel-secondary text-pixel-light-gray text-center">
-            © 2025 PIXEL PATHS. ALL RIGHTS RESERVED.
+            © 2025 NEXT LEVEL. ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>

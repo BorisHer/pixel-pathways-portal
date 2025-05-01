@@ -5,8 +5,8 @@ const PixelHowItWorks: React.FC = () => {
   const steps = [
     {
       number: 1,
-      title: "EXPLORE OPPORTUNITIES",
-      description: "Browse our digital platform for micro-apprenticeships in different career fields."
+      title: "BROWSE JOBS",
+      description: "Search through our curated list of micro-apprenticeships across different industries."
     },
     {
       number: 2,
@@ -15,12 +15,12 @@ const PixelHowItWorks: React.FC = () => {
     },
     {
       number: 3,
-      title: "LEARN BY DOING",
+      title: "GAIN EXPERIENCE",
       description: "Spend 1-2 weeks gaining hands-on experience in a real workplace environment."
     },
     {
       number: 4,
-      title: "EARN BADGES",
+      title: "LEVEL UP",
       description: "Complete your apprenticeship and earn verifiable skill badges for your portfolio."
     }
   ];

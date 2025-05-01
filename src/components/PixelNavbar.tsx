@@ -11,22 +11,22 @@ const PixelNavbar: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <div className="h-8 w-8 bg-pixel-orange mr-2 pixelated"></div>
-          <span className="font-pixel text-pixel-orange text-lg md:text-xl">PIXEL PATHS</span>
+          <span className="font-pixel text-pixel-orange text-lg md:text-xl">NEXT LEVEL</span>
         </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/students" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
-            FOR STUDENTS
+          <Link to="/jobs" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
+            JOBS
           </Link>
-          <Link to="/businesses" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
-            FOR BUSINESSES
+          <Link to="/applications" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
+            APPLICATIONS
           </Link>
           <Link to="/about" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
             ABOUT
           </Link>
           <Link to="/contact" className="pixel-btn">
-            GET STARTED
+            SIGN UP
           </Link>
         </div>
         
@@ -44,18 +44,18 @@ const PixelNavbar: React.FC = () => {
         <div className="md:hidden bg-pixel-black border-t-4 border-pixel-orange pt-2 pb-4 px-4">
           <div className="flex flex-col space-y-4">
             <Link 
-              to="/students" 
+              to="/jobs" 
               className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              FOR STUDENTS
+              JOBS
             </Link>
             <Link 
-              to="/businesses" 
+              to="/applications" 
               className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              FOR BUSINESSES
+              APPLICATIONS
             </Link>
             <Link 
               to="/about" 
@@ -69,7 +69,7 @@ const PixelNavbar: React.FC = () => {
               className="pixel-btn inline-block text-center"
               onClick={() => setIsMenuOpen(false)}
             >
-              GET STARTED
+              SIGN UP
             </Link>
           </div>
         </div>

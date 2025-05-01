@@ -6,31 +6,37 @@ const PixelAbout: React.FC = () => {
     <div className="bg-white py-20 pixel-section">
       <div className="container mx-auto px-4">
         <h2 className="font-pixel text-2xl md:text-3xl text-pixel-black mb-12 text-center">
-          WHAT ARE <span className="text-pixel-orange">MICRO</span>-APPRENTICESHIPS?
+          WHAT ARE <span className="text-pixel-orange">NEXT LEVEL</span> OPPORTUNITIES?
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-pixel-black border-4 border-pixel-orange p-6 transform transition-transform hover:scale-105">
-            <div className="w-16 h-16 bg-pixel-orange mb-4 mx-auto pixelated"></div>
+            <div className="w-16 h-16 bg-pixel-orange mb-4 mx-auto pixelated flex justify-center items-center">
+              <div className="w-8 h-8 bg-black"></div>
+            </div>
             <h3 className="font-pixel text-pixel-orange text-lg mb-3 text-center">SHORT-TERM</h3>
             <p className="font-pixel-secondary text-white text-center">
-              1-2 week hands-on experiences that fit into your schedule, no long-term commitments required.
+              1-2 week micro-apprenticeships that fit into your schedule, no long-term commitments needed.
             </p>
           </div>
           
           <div className="bg-pixel-black border-4 border-pixel-orange p-6 transform transition-transform hover:scale-105">
-            <div className="w-16 h-16 bg-pixel-orange mb-4 mx-auto pixelated"></div>
-            <h3 className="font-pixel text-pixel-orange text-lg mb-3 text-center">REAL WORLD</h3>
+            <div className="w-16 h-16 bg-pixel-orange mb-4 mx-auto pixelated flex justify-center items-center">
+              <div className="w-8 h-8 bg-black"></div>
+            </div>
+            <h3 className="font-pixel text-pixel-orange text-lg mb-3 text-center">REAL JOBS</h3>
             <p className="font-pixel-secondary text-white text-center">
-              Work with local businesses to gain practical skills and experience in diverse career fields.
+              Work with local businesses on actual projects to gain practical skills in diverse career fields.
             </p>
           </div>
           
           <div className="bg-pixel-black border-4 border-pixel-orange p-6 transform transition-transform hover:scale-105">
-            <div className="w-16 h-16 bg-pixel-orange mb-4 mx-auto pixelated"></div>
-            <h3 className="font-pixel text-pixel-orange text-lg mb-3 text-center">EARN BADGES</h3>
+            <div className="w-16 h-16 bg-pixel-orange mb-4 mx-auto pixelated flex justify-center items-center">
+              <div className="w-8 h-8 bg-black"></div>
+            </div>
+            <h3 className="font-pixel text-pixel-orange text-lg mb-3 text-center">EARN SKILLS</h3>
             <p className="font-pixel-secondary text-white text-center">
-              Collect verifiable skill badges that showcase your experiences and abilities to future employers.
+              Collect verifiable skill badges that showcase your real-world experience to future employers.
             </p>
           </div>
         </div>
