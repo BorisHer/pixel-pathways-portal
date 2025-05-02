@@ -85,18 +85,6 @@
 
   body {
     @apply bg-black text-white;
-    image-rendering: pixelated;
-  }
-  
-  /* Improve font readability */
-  .font-pixel {
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-  }
-  
-  .font-pixel-secondary {
-    letter-spacing: 0.5px;
-    line-height: 1.3;
   }
 }
 
@@ -122,57 +110,4 @@
   .pixelated {
     image-rendering: pixelated;
   }
-  
-  /* New pixel art styles */
-  .pixel-card {
-    @apply bg-pixel-black border-4 border-pixel-orange p-6 transform transition-all duration-300;
-    box-shadow: 6px 6px 0px #000000;
-  }
-  
-  /* Improved button with animation */
-  .pixel-btn-animated {
-    @apply pixel-btn relative overflow-hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .pixel-btn-animated:before {
-    content: '';
-    @apply absolute top-0 left-0 w-full h-full bg-white opacity-0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .pixel-btn-animated:hover:before {
-    @apply opacity-20;
-  }
-}
-
-/* New animated pixel elements */
-@keyframes pixel-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-
-@keyframes pixel-slide {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-.pixel-blink {
-  animation: pixel-blink 2s infinite;
-}
-
-.pixel-sliding-light {
-  position: relative;
-  overflow: hidden;
-}
-
-.pixel-sliding-light:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  animation: pixel-slide 2s infinite;
 }

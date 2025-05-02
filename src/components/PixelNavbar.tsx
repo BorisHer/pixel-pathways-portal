@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, LogIn } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const PixelNavbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,20 +16,16 @@ const PixelNavbar: React.FC = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/jobs" className="font-sans text-white hover:text-pixel-orange transition-colors duration-200">
-            Jobs
+          <Link to="/jobs" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
+            JOBS
           </Link>
-          <Link to="/applications" className="font-sans text-white hover:text-pixel-orange transition-colors duration-200">
-            Applications
+          <Link to="/applications" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
+            APPLICATIONS
           </Link>
-          <Link to="/about" className="font-sans text-white hover:text-pixel-orange transition-colors duration-200">
-            About
+          <Link to="/about" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
+            ABOUT
           </Link>
-          <Link to="/login" className="flex items-center bg-white text-pixel-black px-4 py-2 rounded hover:bg-gray-100 transition-colors duration-200">
-            <LogIn size={16} className="mr-2" />
-            <span className="font-sans">Log In</span>
-          </Link>
-          <Link to="/signup" className="pixel-btn">
+          <Link to="/contact" className="pixel-btn">
             SIGN UP
           </Link>
         </div>
@@ -49,35 +45,27 @@ const PixelNavbar: React.FC = () => {
           <div className="flex flex-col space-y-4">
             <Link 
               to="/jobs" 
-              className="font-sans text-white hover:text-pixel-orange py-2"
+              className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Jobs
+              JOBS
             </Link>
             <Link 
               to="/applications" 
-              className="font-sans text-white hover:text-pixel-orange py-2"
+              className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Applications
+              APPLICATIONS
             </Link>
             <Link 
               to="/about" 
-              className="font-sans text-white hover:text-pixel-orange py-2"
+              className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              ABOUT
             </Link>
             <Link 
-              to="/login" 
-              className="flex items-center text-white hover:text-pixel-orange py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <LogIn size={16} className="mr-2" />
-              Log In
-            </Link>
-            <Link 
-              to="/signup" 
+              to="/contact" 
               className="pixel-btn inline-block text-center"
               onClick={() => setIsMenuOpen(false)}
             >
