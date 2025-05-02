@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const PixelHero: React.FC = () => {
   return (
     <div className="bg-pixel-black min-h-[70vh] flex items-center relative overflow-hidden">
-      {/* Pixel art background pattern */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Simplified pixel art background pattern */}
+      <div className="absolute inset-0 opacity-5">
         <div className="grid grid-cols-16 md:grid-cols-32 gap-1">
-          {Array.from({ length: 320 }).map((_, index) => (
+          {Array.from({ length: 100 }).map((_, index) => (
             <div 
               key={`pixel-${index}`} 
-              className={`h-4 w-4 ${Math.random() > 0.5 ? 'bg-pixel-orange' : 'bg-transparent'}`}
+              className={`h-8 w-8 ${Math.random() > 0.5 ? 'bg-pixel-orange' : 'bg-transparent'}`}
             ></div>
           ))}
         </div>
@@ -20,26 +20,26 @@ const PixelHero: React.FC = () => {
       <div className="container mx-auto px-4 py-16 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="font-pixel text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight animate-pixel-flicker">
+            <h1 className="font-pixel text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight">
               LEVEL UP YOUR <span className="text-pixel-orange">CAREER</span>
             </h1>
-            <p className="font-pixel-secondary text-xl md:text-2xl text-white mb-8 tracking-wide">
-              SHORT-TERM APPRENTICESHIPS FOR REAL-WORLD EXPERIENCE
+            <p className="font-sans text-xl md:text-2xl text-white mb-8">
+              Short-term apprenticeships for real-world experience
               <br />
-              <span className="text-pixel-orange">FOR AGES 14-22</span>
+              <span className="text-pixel-orange font-medium">Ages 14-22</span>
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Link to="/jobs" className="pixel-btn animate-pixel-pulse">
+              <Link to="/jobs" className="pixel-btn">
                 FIND JOBS
               </Link>
-              <Link to="/applications" className="pixel-btn bg-white text-pixel-black hover:bg-gray-100">
-                MY APPLICATIONS
+              <Link to="/applications" className="bg-white text-pixel-black hover:bg-gray-100 px-6 py-3 font-medium rounded transition-all duration-200">
+                My Applications
               </Link>
             </div>
           </div>
 
-          <div className="hidden lg:block">
-            {/* Pixel Art Computer with Character */}
+          <div className="hidden lg:flex justify-center">
+            {/* Simplified Pixel Art Computer with Character */}
             <div className="w-full h-64 relative animate-pixel-float flex justify-center">
               <div className="relative">
                 {/* Computer Monitor */}
