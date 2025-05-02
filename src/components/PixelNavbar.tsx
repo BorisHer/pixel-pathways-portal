@@ -7,7 +7,7 @@ const PixelNavbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-pixel-black py-4 border-b-4 border-pixel-orange sticky top-0 z-50">
+    <nav className="bg-gray-900 py-4 border-b-2 border-pixel-orange sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <div className="h-8 w-8 bg-pixel-orange mr-2 pixelated"></div>
@@ -16,17 +16,20 @@ const PixelNavbar: React.FC = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/jobs" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
-            JOBS
+          <Link to="/jobs" className="font-sans text-white hover:text-pixel-orange transition-colors duration-200 text-base">
+            Jobs
           </Link>
-          <Link to="/applications" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
-            APPLICATIONS
+          <Link to="/applications" className="font-sans text-white hover:text-pixel-orange transition-colors duration-200 text-base">
+            Applications
           </Link>
-          <Link to="/about" className="font-pixel-secondary text-white hover:text-pixel-orange transition-colors duration-200">
-            ABOUT
+          <Link to="/about" className="font-sans text-white hover:text-pixel-orange transition-colors duration-200 text-base">
+            About
           </Link>
-          <Link to="/contact" className="pixel-btn">
-            SIGN UP
+          <Link to="/login" className="font-sans text-white hover:text-pixel-orange transition-colors duration-200 text-base mr-2">
+            Login
+          </Link>
+          <Link to="/contact" className="bg-pixel-orange text-gray-900 font-sans font-medium py-2 px-5 rounded hover:bg-pixel-orange-light transition-colors duration-200 text-base">
+            Sign Up
           </Link>
         </div>
         
@@ -41,35 +44,42 @@ const PixelNavbar: React.FC = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-pixel-black border-t-4 border-pixel-orange pt-2 pb-4 px-4">
+        <div className="md:hidden bg-gray-900 border-t border-gray-800 pt-2 pb-4 px-4">
           <div className="flex flex-col space-y-4">
             <Link 
               to="/jobs" 
-              className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
+              className="font-sans text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              JOBS
+              Jobs
             </Link>
             <Link 
               to="/applications" 
-              className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
+              className="font-sans text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              APPLICATIONS
+              Applications
             </Link>
             <Link 
               to="/about" 
-              className="font-pixel-secondary text-white hover:text-pixel-orange py-2"
+              className="font-sans text-white hover:text-pixel-orange py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              ABOUT
+              About
+            </Link>
+            <Link 
+              to="/login" 
+              className="font-sans text-white hover:text-pixel-orange py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Login
             </Link>
             <Link 
               to="/contact" 
-              className="pixel-btn inline-block text-center"
+              className="bg-pixel-orange text-gray-900 font-sans py-2 px-4 rounded text-center"
               onClick={() => setIsMenuOpen(false)}
             >
-              SIGN UP
+              Sign Up
             </Link>
           </div>
         </div>

@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,7 +34,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0px;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -84,26 +83,27 @@
   }
 
   body {
-    @apply bg-black text-white;
+    @apply bg-gray-100 text-gray-900 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-pixel leading-tight;
+  }
+  
+  p, ul, li, a {
+    @apply font-sans leading-relaxed;
   }
 }
 
-/* Pixel Art Styling */
+/* Pixel Art Styling - Simplified */
 @layer components {
-  .pixel-border {
-    @apply border-4 border-pixel-black box-content;
-    image-rendering: pixelated;
-  }
-  
   .pixel-btn {
-    @apply font-pixel bg-pixel-orange text-black px-4 py-3 border-4 border-black 
-           hover:bg-pixel-orange-light transition-colors duration-200 
-           uppercase tracking-wider text-sm sm:text-base shadow-[4px_4px_0_0_#000];
-    image-rendering: pixelated;
+    @apply bg-pixel-orange text-gray-900 font-sans font-medium py-2 px-6 rounded 
+           hover:bg-pixel-orange-light transition-colors duration-200;
   }
 
   .pixel-section {
-    @apply border-y-8 border-pixel-black;
+    @apply border-y-4 border-pixel-black;
     box-shadow: 0px 4px 0px 0px #F97316, 0px -4px 0px 0px #F97316;
   }
   

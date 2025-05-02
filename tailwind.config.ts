@@ -74,11 +74,18 @@ export default {
 			fontFamily: {
 				'pixel': ['"Press Start 2P"', 'cursive'],
 				'pixel-secondary': ['"VT323"', 'monospace'],
+				'sans': ['Open Sans', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			gridTemplateColumns: {
+				'40': 'repeat(40, minmax(0, 1fr))',
+			},
+			gridTemplateRows: {
+				'20': 'repeat(20, minmax(0, 1fr))',
 			},
 			keyframes: {
 				'accordion-down': {
