@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
+import { Button } from './ui/button';
 
 const PixelForWho: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const PixelForWho: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* For Students */}
-          <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <div className="border-b-2 border-pixel-orange">
               <h2 className="font-pixel text-2xl md:text-3xl text-pixel-orange py-6 text-center">
                 FOR JOB SEEKERS
@@ -25,15 +26,17 @@ const PixelForWho: React.FC = () => {
                 ))}
               </ul>
               <div className="text-center">
-                <Link to="/jobs" className="bg-pixel-orange text-gray-900 font-sans font-medium py-3 px-8 rounded hover:bg-pixel-orange-light transition-colors duration-300">
-                  Find Jobs
+                <Link to="/jobs" className="inline-block">
+                  <Button className="bg-pixel-orange text-gray-900 font-pixel py-3 px-8 rounded hover:bg-pixel-orange-light transition-colors duration-300 text-sm">
+                    FIND JOBS
+                  </Button>
                 </Link>
               </div>
             </div>
           </div>
           
           {/* For Businesses */}
-          <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <div className="border-b-2 border-pixel-orange">
               <h2 className="font-pixel text-2xl md:text-3xl text-pixel-orange py-6 text-center">
                 FOR EMPLOYERS
@@ -49,8 +52,10 @@ const PixelForWho: React.FC = () => {
                 ))}
               </ul>
               <div className="text-center">
-                <Link to="/post-job" className="bg-pixel-orange text-gray-900 font-sans font-medium py-3 px-8 rounded hover:bg-pixel-orange-light transition-colors duration-300">
-                  Post a Job
+                <Link to="/post-job" className="inline-block">
+                  <Button className="bg-pixel-orange text-gray-900 font-pixel py-3 px-8 rounded hover:bg-pixel-orange-light transition-colors duration-300 text-sm">
+                    POST A JOB
+                  </Button>
                 </Link>
               </div>
             </div>
