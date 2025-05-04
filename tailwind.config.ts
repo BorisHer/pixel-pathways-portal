@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -67,13 +66,21 @@ export default {
 					'orange': '#F97316',
 					'orange-light': '#FDBA74',
 					'black': '#000000',
-					'dark-gray': '#333333',
+					'dark-gray': '#1A1A1A',
 					'light-gray': '#888888',
+					'accent-blue': '#3B82F6',
+					'accent-purple': '#8B5CF6',
+					'accent-pink': '#EC4899',
+					'gradient-start': '#F97316',
+					'gradient-end': '#FB923C',
+					'surface': '#141414',
+					'surface-light': '#1F1F1F'
 				}
 			},
 			fontFamily: {
 				'pixel': ['"Press Start 2P"', 'cursive'],
 				'pixel-secondary': ['"VT323"', 'monospace'],
+				'lexend': ['Lexend', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

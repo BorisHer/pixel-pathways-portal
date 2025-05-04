@@ -1,11 +1,14 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Lexend:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -91,17 +94,40 @@
 /* Pixel Art Styling */
 @layer components {
   .pixel-border {
-    @apply border-4 border-pixel-black box-content;
+    @apply border-2 border-pixel-black rounded-md transition-all duration-200;
+    box-shadow: 4px 4px 0 0 theme('colors.pixel.orange');
     image-rendering: pixelated;
   }
   
   .pixel-btn {
-    @apply font-pixel bg-pixel-orange text-black px-4 py-3 border-4 border-black 
-           hover:bg-pixel-orange-light transition-colors duration-200 
-           uppercase tracking-wider text-sm sm:text-base shadow-[4px_4px_0_0_#000];
+    @apply font-pixel bg-gradient-to-r from-pixel-gradient-start to-pixel-gradient-end 
+           text-black px-6 py-3 rounded-md border-2 border-black
+           hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#000]
+           active:translate-y-[0px] active:shadow-[4px_4px_0_0_#000]
+           transition-all duration-200 uppercase tracking-wider text-sm sm:text-base
+           shadow-[4px_4px_0_0_#000] backdrop-blur-sm;
     image-rendering: pixelated;
   }
 
+  .pixel-btn-secondary {
+    @apply font-pixel bg-pixel-surface text-pixel-orange px-6 py-3 rounded-md 
+           border-2 border-pixel-orange hover:bg-pixel-surface-light
+           hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_theme('colors.pixel.orange')]
+           active:translate-y-[0px] active:shadow-[4px_4px_0_0_theme('colors.pixel.orange')]
+           transition-all duration-200 uppercase tracking-wider text-sm sm:text-base
+           shadow-[4px_4px_0_0_theme('colors.pixel.orange')];
+  }
+
+  .pixel-card {
+    @apply bg-pixel-surface border-2 border-gray-800 rounded-lg p-6
+           hover:border-pixel-orange/50 transition-all duration-300
+           hover:shadow-[0_0_20px_rgba(249,115,22,0.1)];
+  }
+
+  .important-text {
+    @apply font-lexend font-semibold text-xl md:text-2xl tracking-wide leading-relaxed;
+  }
+  
   .pixel-section {
     @apply border-y-8 border-pixel-black;
     box-shadow: 0px 4px 0px 0px #F97316, 0px -4px 0px 0px #F97316;
@@ -109,5 +135,64 @@
   
   .pixelated {
     image-rendering: pixelated;
+  }
+  
+  .professional-text {
+    @apply font-lexend text-base md:text-lg font-normal tracking-wide leading-relaxed;
+  }
+
+  .section-bg {
+    @apply bg-pixel-black relative overflow-hidden;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(20,20,20,0.98));
+  }
+
+  .section-bg::before {
+    content: '';
+    @apply absolute inset-0 bg-[url('/grid.png')] opacity-[0.05] pointer-events-none;
+    background-size: 30px 30px;
+    animation: backgroundShift 20s linear infinite;
+  }
+
+  .section-bg::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: radial-gradient(circle at 50% 50%, 
+                rgba(249,115,22,0.03) 0%,
+                rgba(139,92,246,0.02) 50%,
+                rgba(0,0,0,0) 100%);
+  }
+
+  .gradient-border {
+    @apply relative rounded-lg p-[2px];
+    background: linear-gradient(
+      45deg,
+      theme('colors.pixel.orange'),
+      theme('colors.pixel.accent-purple'),
+      theme('colors.pixel.accent-pink'),
+      theme('colors.pixel.orange')
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md relative;
+    background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.9) 0%,
+      rgba(30, 30, 30, 0.8) 100%
+    );
+    box-shadow: inset 0 0 20px rgba(249,115,22,0.05);
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes backgroundShift {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
   }
 }
