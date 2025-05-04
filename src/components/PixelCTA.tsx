@@ -6,12 +6,8 @@ const PixelCTA: React.FC = () => {
   return (
     <section id="cta" className="section-bg min-h-screen flex items-center relative overflow-hidden">
       <div className="container mx-auto px-6 relative">
-        {/* Background Effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pixel-orange/5 via-pixel-accent-purple/5 to-pixel-accent-pink/5 
-                      animate-pulse [animation-duration:4s]"></div>
-        
         <div className="max-w-5xl mx-auto relative">
-          <div className="gradient-border p-[2px]">
+          <div className="bg-pixel-surface p-[2px] rounded-lg">
             <div className="glass-effect rounded-lg px-8 py-12 relative">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-pixel-orange/30 rounded-tl-lg"></div>
